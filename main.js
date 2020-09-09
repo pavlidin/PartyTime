@@ -5,6 +5,8 @@ const toggler1 = document.querySelector("#toggler1");
 const party = document.querySelectorAll(".party");
 const body = document.querySelector("body");
 const textParty = document.querySelectorAll(".textParty");
+const masterContainer = document.querySelectorAll(".masterContainer");
+
 
 let randomColor = ()=> {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`

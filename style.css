@@ -8,46 +8,39 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--bgDark);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .masterContainer {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr;
   height: 100vh;
+  width: 100vw;
+  min-height: -webkit-fill-available;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   align-items: center;
   transition: all 1.8s ease-in-out;
-  grid-area: 1 / 1;
 }
 
 .container2 {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   align-items: center;
   transition: all 1.8s ease-in-out;
-  grid-area: 2 / 1;
 }
 
 .container3 {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   align-items: center;
   transition: all 1.8s ease-in-out;
-  grid-area: 3 / 1;
 }
 
 #toggler1 {
   position: absolute;
-  top: 0%;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
   box-sizing: border-box;
   text-decoration: none;
   justify-content: center;
@@ -56,32 +49,16 @@ body {
   display: flex;
   color: white;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   background-color: var(--secondary);
-  margin: 1rem;
   z-index: 1;
+  font-size: 1.5rem;
 }
 
 #toggler1:hover {
   border: 1px solid white;
   transition: all 0.3s ease 0s;
-}
-
-#toggler1:active {
-  transform: scale(0.9);
-  transition: all 0.1s ease 0s;
-}
-
-#slider1 {
-width: 50vw;
-}
-
-.controller {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .party {
@@ -118,6 +95,7 @@ width: 50vw;
  -webkit-user-select: none;
  -ms-user-select: none;
  user-select: none;
+ font-size: 4rem;
 }
 
 
@@ -304,8 +282,44 @@ width: 50vw;
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .textParty {
+          font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .textParty {
+          font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .textParty {
+          font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .textParty {
+          font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .textParty {
+          font-size: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
-      .textParty {
-              font-size: 1rem;
-      }
+  .textParty {
+          font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .textParty {
+          font-size: 0.3rem;
+  }
 }
